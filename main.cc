@@ -8,6 +8,7 @@
 #include "player_random.h"
 #include "player_random_dist.h"
 #include "player_mike.h"
+#include "player_ask.h"
 
 const int numGames = 1000;
 
@@ -25,12 +26,12 @@ int main()
    players.push_back(new PlayerRandomDist("RANDOM_DIST"  ));
    players.push_back(new PlayerRandom(    "RANDOM"       ));
    players.push_back(new PlayerMike(      "MIKE"         ));
+   players.push_back(new PlayerAsk(       "ASK"          ));
 
    Tournament t(players);
    
    t.play(numGames);
 
    t.show();
-
 } // end of main
 

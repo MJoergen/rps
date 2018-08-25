@@ -21,5 +21,6 @@ of the tournament is to achieve the highest total number of wins.
 * RANDOM      : This is the "optimal" strategy.
 * CONST       : This player always plays the same move.
 * COPY        : This player always copies the opponents last move.
-* RANDOM_DIST : This player guess what the opponent picks from the distribution of your last choices.
+* RANDOM_DIST : This player guesses what the opponent picks from the distribution of your last choices.
 * MIKE        : The fantastic player that can predict the opponents next move :-)
+* ASK         : The even more fantastic player that takes advantage of the fact that you can score a lot of points from the simple AIs :D
