@@ -33,7 +33,7 @@ int Match::play(int numGames)
                   break;
       }
 
-      std::cout << "Game " << g << ": " << names[draw1] << " v " << names[draw2] << " : " << res << std::endl; 
+//      std::cout << "Game " << g << ": " << names[draw1] << " v " << names[draw2] << " : " << res << std::endl; 
 
       moveHistory1.push_back(Move(draw1, draw2));
       moveHistory2.push_back(Move(draw2, draw1));
