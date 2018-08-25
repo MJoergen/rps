@@ -21,4 +21,5 @@ of the tournament is to achieve the highest total number of wins.
 * RANDOM : This is the "optimal" strategy.
 * CONST  : This player always plays the same move.
 * COPY   : This player always copies the opponents last move.
+* MIKE   : The fantastic player that can predict the opponents next move :-)
 
