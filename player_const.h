@@ -4,6 +4,12 @@
 #include <string>
 #include "player.h"
 
+// This is a very stupid player: It always
+// plays the same move every time!
+//
+// The particular move it plays is selected
+// in the constructor.
+
 class PlayerConst : public Player
 {
 public:
@@ -18,7 +24,7 @@ public:
    } // end of int move
 
 private:
-   int         m_play;
+   int m_play;
 
 }; // end of PlayerConst
 
