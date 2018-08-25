@@ -2,6 +2,7 @@
 #define _TOURNAMENT_H_
 
 #include <vector>
+#include <unordered_map>
 #include "player.h"
 
 class Tournament
@@ -20,6 +21,7 @@ public:
 private:
    std::vector<Player *> m_players;
    std::vector<int> m_scores;
+   std::unordered_map< std::string, std::pair< std::string, int > > m_biggest_competitor;
 };
 
 #endif // _TOURNAMENT_H_
