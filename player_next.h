@@ -8,7 +8,7 @@
 // plays the move that beats the opponents previous move!
 // The first move is selected in the constructor
 
-int beats(int draw)
+static int beats(int draw)
 {
    switch (draw)
    {
