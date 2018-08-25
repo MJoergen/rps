@@ -17,8 +17,8 @@ of the tournament is to achieve the highest total number of wins.
 
 ## Current list of bots
 
-* NEXT   : This player always plays the move that beats the opponents last move.
-* RANDOM : This is the "optimal" strategy.
-* CONST  : This player always plays the same move.
-* COPY   : This player always copies the opponents last move.
-
+* NEXT        : This player always plays the move that beats the opponents last move.
+* RANDOM      : This is the "optimal" strategy.
+* CONST       : This player always plays the same move.
+* COPY        : This player always copies the opponents last move.
+* RANDOM_DIST : This player guess what the opponent picks from the distribution of your last choices.

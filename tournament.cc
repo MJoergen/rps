@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include <map>
+#include <functional>
 #include "tournament.h"
 #include "match.h"
 
