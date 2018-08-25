@@ -17,13 +17,13 @@ public:
 	int move(const std::vector<Move>& moveHistory)
 	{
 		if (moveHistory.size() == 0) { //The first move
+			opponentMoveCounts[0] = 0;
+			opponentMoveCounts[1] = 0;
+			opponentMoveCounts[2] = 0;
 			return rand() % 3;
 		}
 
-		int opponentMoveCounts[] = { 0,0,0 };
-		for (int moveId = 0; moveId < moveHistory.size(); ++moveId) { // Count how many of each type of move the opponent has performed
-			++opponentMoveCounts[moveHistory[moveId].m_you];
-		}
+		++opponentMoveCounts[moveHistory[moveHistory.size() - 1].m_you];
 
 		double randVal = (double)rand()/RAND_MAX;
 		if (randVal <= (double)opponentMoveCounts[0] / moveHistory.size()) {
@@ -36,7 +36,7 @@ public:
 	} // end of int move
 
 private:
-
+	int opponentMoveCounts[3];
 }; // end of PlayerRandom
 
 #endif // _PLAYER_RANDOM_H_
