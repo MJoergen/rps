@@ -1,4 +1,5 @@
 #include <vector>
+#include <stdlib.h>
 #include "tournament.h"
 #include "player.h"
 #include "player_const.h"
@@ -6,11 +7,14 @@
 #include "player_next.h"
 #include "player_random.h"
 #include "player_random_dist.h"
+#include "player_mike.h"
 
 const int numGames = 1000;
 
 int main()
 {
+   srand(time(0));
+
    std::vector<Player *> players;
 
    players.push_back(new PlayerConst(     "ROCK",       0));
@@ -20,6 +24,7 @@ int main()
    players.push_back(new PlayerNext(      "NEXT",       0));
    players.push_back(new PlayerRandomDist("RANDOM_DIST"  ));
    players.push_back(new PlayerRandom(    "RANDOM"       ));
+   players.push_back(new PlayerMike(      "MIKE"         ));
 
    Tournament t(players);
    

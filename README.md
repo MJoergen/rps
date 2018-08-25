@@ -22,3 +22,4 @@ of the tournament is to achieve the highest total number of wins.
 * CONST       : This player always plays the same move.
 * COPY        : This player always copies the opponents last move.
 * RANDOM_DIST : This player guess what the opponent picks from the distribution of your last choices.
+* MIKE        : The fantastic player that can predict the opponents next move :-)
