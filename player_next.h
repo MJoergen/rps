@@ -8,17 +8,6 @@
 // plays the move that beats the opponents previous move!
 // The first move is selected in the constructor
 
-static int beats(int draw)
-{
-   switch (draw)
-   {
-      case 0 : return 1;
-      case 1 : return 2;
-      case 2 : return 0;
-      default: return 0; // This is only needed to avoid compiler warnings
-   }
-} // end of beats
-
 class PlayerNext : public Player
 {
 public:
