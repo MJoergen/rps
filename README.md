@@ -8,6 +8,9 @@ shortcomings.
 Can you make a bot that out-smarts the other bots, while at the same time
 avoiding being out-smarted itself?
 
+## Building from source
+    make
+
 ## Rules of the tournament
 This program plays a round-robin tournament of Rock Paper Scissors between a
 number of bots.
