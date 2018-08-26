@@ -29,4 +29,6 @@ of the tournament is to achieve the highest total number of wins.
 * CYCLE_2     : A cycle player that occasionally changes direction.
 * CYCLE_3     : Another cycle player that occasionally "misses a step", i.e. repeats the last move.
 * MIKE_3      : The incarnation of SkyNet.
+* NEXT_2      : Slightly more intelligent version of NEXT, that tries to detect if the opponent has figured out its strategy.
+* ANTI_NEXT   : Specifically designed to win against the NEXT strategy.
 

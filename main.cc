@@ -9,6 +9,8 @@
 #include "player_cycle_3.h"
 #include "player_copy.h"
 #include "player_next.h"
+#include "player_next_2.h"
+#include "player_anti_next.h"
 #include "player_random.h"
 #include "player_random_dist.h"
 #include "player_mike.h"
@@ -37,6 +39,8 @@ int main()
    players.push_back(new PlayerCycle_3(   "CYCLE_3"      ));
    players.push_back(new PlayerCopy(      "COPY",       0));
    players.push_back(new PlayerNext(      "NEXT",       0));
+   players.push_back(new PlayerNext_2(    "NEXT_2"       ));
+   players.push_back(new PlayerAntiNext(  "ANTI_NEXT",  0));
    players.push_back(new PlayerRandomDist("RANDOM_DIST"  ));
    players.push_back(new PlayerRandom(    "RANDOM"       ));
    players.push_back(new PlayerMike(      "MIKE"         ));
