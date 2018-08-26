@@ -26,4 +26,6 @@ of the tournament is to achieve the highest total number of wins.
 * ASK         : The even more fantastic player that takes advantage of the fact that you can score a lot of points from the simple AIs :D
 * CYCLE       : Another stupid player that just cycles through the three possible moves.
 * MIKE_2      : A new and improved version of MIKE with an outstanding AI :-)
+* CYCLE_2     : A cycle player that occasionally changes direction
+* CYCLE_3     : Another cycle player that occasionally "misses a step", i.e. repeats the last move
 

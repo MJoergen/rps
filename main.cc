@@ -4,6 +4,8 @@
 #include "player.h"
 #include "player_const.h"
 #include "player_cycle.h"
+#include "player_cycle_2.h"
+#include "player_cycle_3.h"
 #include "player_copy.h"
 #include "player_next.h"
 #include "player_random.h"
@@ -28,6 +30,8 @@ int main()
    players.push_back(new PlayerConst(     "PAPER",      1));
    players.push_back(new PlayerConst(     "SCISSORS",   2));
    players.push_back(new PlayerCycle(     "CYCLE"        ));
+   players.push_back(new PlayerCycle_2(   "CYCLE_2"      ));
+   players.push_back(new PlayerCycle_3(   "CYCLE_3"      ));
    players.push_back(new PlayerCopy(      "COPY",       0));
    players.push_back(new PlayerNext(      "NEXT",       0));
    players.push_back(new PlayerRandomDist("RANDOM_DIST"  ));
