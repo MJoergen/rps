@@ -24,3 +24,6 @@ of the tournament is to achieve the highest total number of wins.
 * RANDOM_DIST : This player guesses what the opponent picks from the distribution of your last choices.
 * MIKE        : The fantastic player that can predict the opponents next move :-)
 * ASK         : The even more fantastic player that takes advantage of the fact that you can score a lot of points from the simple AIs :D
+* CYCLE       : Another stupid player that just cycles through the three possible moves.
+* MIKE_2      : A new and improved version of MIKE with an outstanding AI :-)
+
