@@ -15,20 +15,20 @@ void Tournament::play()
          Match match(m_players[p1], m_players[p2]);
          int res = match.play(m_numGames);
 
-		 if (m_biggest_competitor.find(m_players[p1]->name()) == m_biggest_competitor.end() || //If player one has not played a game before
-			 m_biggest_competitor[m_players[p1]->name()].second > res) { // If player two was a bigger competitor
-			 m_biggest_competitor[m_players[p1]->name()] = std::pair<std::string, int>(m_players[p2]->name(), res);
-		 }
+         if (m_biggest_competitor.find(m_players[p1]->name()) == m_biggest_competitor.end() || //If player one has not played a game before
+               m_biggest_competitor[m_players[p1]->name()].second > res) { // If player two was a bigger competitor
+            m_biggest_competitor[m_players[p1]->name()] = std::pair<std::string, int>(m_players[p2]->name(), res);
+         }
 
-		 if (m_biggest_competitor.find(m_players[p2]->name()) == m_biggest_competitor.end() || //If player two has not played a game before
-			 m_biggest_competitor[m_players[p2]->name()].second > -res) { // If player one was a bigger competitor
-			 m_biggest_competitor[m_players[p2]->name()] = std::pair<std::string, int>(m_players[p1]->name(), -res);
-		 }
+         if (m_biggest_competitor.find(m_players[p2]->name()) == m_biggest_competitor.end() || //If player two has not played a game before
+               m_biggest_competitor[m_players[p2]->name()].second > -res) { // If player one was a bigger competitor
+            m_biggest_competitor[m_players[p2]->name()] = std::pair<std::string, int>(m_players[p1]->name(), -res);
+         }
 
-		 if (res > 0)
-			 std::cout << "The winner is " << m_players[p1]->name() << " with " << res << " points";
-		 else if (res < 0)
-			 std::cout << "The winner is " << m_players[p2]->name() << " with " << -res << " points";
+         if (res > 0)
+            std::cout << "The winner is " << m_players[p1]->name() << " with " << res << " points";
+         else if (res < 0)
+            std::cout << "The winner is " << m_players[p2]->name() << " with " << -res << " points";
          else
             std::cout << "The match ended in a DRAW!";
          std::cout << std::endl;
