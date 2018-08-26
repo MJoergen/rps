@@ -19,7 +19,7 @@ public:
    int move(const std::vector<Move>& moveHistory)
    {
       if (moveHistory.size() > 0)
-         return moveHistory[moveHistory.size()-1].m_you;
+         return moveHistory.back().m_you;
       else
          return m_first;
    } // end of int move

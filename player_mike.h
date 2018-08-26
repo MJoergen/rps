@@ -26,14 +26,14 @@ public:
       // The next nine moves, just play whatever beats the opponents last move.
       if (moveHistory.size() < 10)
       {
-         return beats(moveHistory[moveHistory.size()-1].m_you);
+         return beats(moveHistory.back().m_you);
       }
 
       // If last game was a draw
-      if (moveHistory[moveHistory.size()-1].m_me == moveHistory[moveHistory.size()-1].m_you)
+      if (moveHistory.back().m_me == moveHistory.back().m_you)
       {
          // Assume the opponent will try to beat our last move.
-         return beats(beats(moveHistory[moveHistory.size()-1].m_me));
+         return beats(beats(moveHistory.back().m_me));
       }
 
       // If we lost the last two games
@@ -41,14 +41,14 @@ public:
        && (beats(moveHistory[moveHistory.size()-2].m_me) == moveHistory[moveHistory.size()-2].m_you))
       {
          // Assume the opponent will copy our last move.
-         return beats(moveHistory[moveHistory.size()-1].m_me);
+         return beats(moveHistory.back().m_me);
       }
 
       // If we lost the last game
-      if (beats(moveHistory[moveHistory.size()-1].m_me) == moveHistory[moveHistory.size()-1].m_you)
+      if (beats(moveHistory.back().m_me) == moveHistory.back().m_you)
       {
          // Assume the opponent will try to beat our last move.
-         return beats(beats(moveHistory[moveHistory.size()-1].m_me));
+         return beats(beats(moveHistory.back().m_me));
       }
 
       // If we won the last two game
@@ -56,21 +56,21 @@ public:
        && (moveHistory[moveHistory.size()-2].m_me == beats(moveHistory[moveHistory.size()-2].m_you)))
       {
          // Just keep playing the same
-         return moveHistory[moveHistory.size()-1].m_me;
+         return moveHistory.back().m_me;
       }
 
       // If we won the last game
-      if (moveHistory[moveHistory.size()-1].m_me == beats(moveHistory[moveHistory.size()-1].m_you))
+      if (moveHistory.back().m_me == beats(moveHistory.back().m_you))
       {
          // Assume the opponent will copy our last move.
-         return beats(moveHistory[moveHistory.size()-1].m_me);
+         return beats(moveHistory.back().m_me);
       }
 
       // Otherwise play whatever beats the opponents move some time ago.
       switch (rand()%1)
       {
-         case 0:  return beats(beats(moveHistory[moveHistory.size()-1].m_me));
-         default: return beats(moveHistory[moveHistory.size()-1].m_you);
+         case 0:  return beats(beats(moveHistory.back().m_me));
+         default: return beats(moveHistory.back().m_you);
       }
    } // end of int move
 

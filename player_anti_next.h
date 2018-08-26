@@ -20,7 +20,7 @@ public:
    int move(const std::vector<Move>& moveHistory)
    {
       if (moveHistory.size() > 0)
-         return beats(beats(moveHistory[moveHistory.size()-1].m_me));
+         return beats(beats(moveHistory.back().m_me));
       else
          return m_first;
    } // end of int move

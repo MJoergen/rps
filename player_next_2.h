@@ -25,7 +25,7 @@ public:
       // The first few games, just play whatever beats the opponents last move.
       if (moveHistory.size() < 3)
       {
-         return beats(moveHistory[moveHistory.size()-1].m_you);
+         return beats(moveHistory.back().m_you);
       }
       
 
@@ -43,7 +43,7 @@ public:
 
       if (!allLost)
       {
-         return beats(moveHistory[moveHistory.size()-1].m_you);
+         return beats(moveHistory.back().m_you);
       }
 
       return rand() % 3;
