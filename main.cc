@@ -28,10 +28,11 @@ int main()
    players.push_back(new PlayerMike(      "MIKE"         ));
    players.push_back(new PlayerAsk(       "ASK"          ));
 
-   Tournament t(players);
+   Tournament t(players, numGames);
    
-   t.play(numGames);
+   t.play();
 
+   t.showTable();
    t.show();
 } // end of main
 
