@@ -13,6 +13,7 @@
 #include "player_random_dist.h"
 #include "player_mike.h"
 #include "player_mike_2.h"
+#include "player_mike_3.h"
 #include "player_ask.h"
 
 #ifdef DEBUG
@@ -41,6 +42,7 @@ int main()
    players.push_back(new PlayerMike(      "MIKE"         ));
    players.push_back(new PlayerAsk(       "ASK"          ));
    players.push_back(new PlayerMike_2(    "MIKE_2"       ));
+   players.push_back(new PlayerMike_3(    "MIKE_3"       ));
 
    Tournament t(players, numGames);
    

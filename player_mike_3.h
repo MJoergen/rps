@@ -1,0 +1,83 @@
+#ifndef _PLAYER_MIKE_3_H_
+#define _PLAYER_MIKE_3_H_
+
+#include <string>
+#include <iomanip>
+#include <stdlib.h>
+#include "player.h"
+
+// This is another awesome player: It uses
+// quantum magical algorithms :-)
+
+class PlayerMike_3 : public Player
+{
+public:
+   PlayerMike_3(const std::string& name) :
+      Player(name),
+      m_predict(27)
+   {}
+
+   int move(const std::vector<Move>& moveHistory)
+   {
+      if (!moveHistory.empty())
+      {
+         // Attempt to predict the opponents strategy
+         fillPredict(moveHistory);
+
+         int row = moveHistory.back().m_you*3 + moveHistory.back().m_me;
+
+         int s = select(m_predict[row*3], m_predict[row*3+1], m_predict[row*3+2]);
+
+         return beats(s);
+      }
+
+      return rand() % 3;
+
+   } // end of int move
+
+private:
+   int select(int val0, int val1, int val2)
+   {
+#ifdef DEBUG
+      std::cout << "vals=" << val0 << ", " << val1 << ", " << val2 << std::endl;
+#endif
+      int sum = val0+val1+val2;
+      if (sum == 0)
+         return rand() % 3;
+
+      int r = rand()%sum;
+      if (r < val0)
+         return 0;
+      if (r < val0+val1)
+         return 1;
+      return 2;
+   } // end of select
+
+   void fillPredict(const std::vector<Move>& moveHistory)
+   {
+      for (int ix=0; ix<27; ++ix)
+      {
+         m_predict[ix] = 0;
+      }
+
+      for (int i=1; i<moveHistory.size(); ++i)
+      {
+         int ix = moveHistory[i-1].m_you*9 + moveHistory[i-1].m_me*3 + moveHistory[i].m_you;
+         m_predict[ix] += 1;
+      }
+
+#ifdef DEBUG
+      for (int row=0; row<9; ++row)
+      {
+         std::cout << m_predict[3*row] << " , " << m_predict[3*row+1] << " , " << m_predict[3*row+2] << std::endl;
+      }
+#endif
+   }
+
+private:
+   std::vector<int> m_predict;
+
+}; // end of PlayerMike_3
+
+#endif // _PLAYER_MIKE_3_H_
+

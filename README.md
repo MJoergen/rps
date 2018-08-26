@@ -28,4 +28,5 @@ of the tournament is to achieve the highest total number of wins.
 * MIKE_2      : A new and improved version of MIKE with an outstanding AI :-)
 * CYCLE_2     : A cycle player that occasionally changes direction.
 * CYCLE_3     : Another cycle player that occasionally "misses a step", i.e. repeats the last move.
+* MIKE_3      : The incarnation of SkyNet.
 
