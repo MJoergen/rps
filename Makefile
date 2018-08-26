@@ -3,7 +3,8 @@ PROG=rps
 CC=g++
 CFLAGS=-O3 -std=c++11 
 FILES=*cc
+OUT=$(PROG).o
 #****************************************************************
 
 $(PROG):
-	$(CC) $(CFLAGS) $(FILES) -o $(PROG) 
+	$(CC) $(CFLAGS) $(FILES) -o $(OUT)
