@@ -5,30 +5,18 @@
 #ifndef RPS_PLAYER_MADS_H
 #define RPS_PLAYER_MADS_H
 
-#endif //RPS_PLAYER_MADS_H
 
 #include "player.h"
 #include <random>
 
 class PlayerMads : public Player
 {
-private:
-    float calcAvg(std::vector<Move>& moveHistory)
-    {
-        float sum(0.0);
-
-        for (int i = 0 ; i < moveHistory.size() ; ++i) {
-            sum += moveHistory[i].m_you;
-        }
-
-        return sum/((float) moveHistory.size());
-    }
 public:
-    PlayerMads(const std::string& name) :
+    explicit PlayerMads(const std::string& name) :
         Player(name)
     {}
 
-    int move (std::vector<Move>& moveHistory)
+    int move (const std::vector<Move>& moveHistory)
     {
         float avg = calcAvg(moveHistory);
 
@@ -44,4 +32,19 @@ public:
         else
             return SCISSORS;
     }
+private:
+    float calcAvg(const std::vector<Move>& moveHistory)
+    {
+        float sum(0.0);
+
+        for (int i = 0 ; i < moveHistory.size() ; ++i) {
+            sum += moveHistory[i].m_you;
+        }
+
+        return sum/((float) moveHistory.size());
+    }
+
+
 };
+
+#endif //RPS_PLAYER_MADS_H
