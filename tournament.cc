@@ -8,9 +8,9 @@
 
 void Tournament::play()
 {
-   for (int p1=0; p1<m_players.size(); ++p1)
+   for (size_t p1=0; p1<m_players.size(); ++p1)
    {
-      for (int p2=p1+1; p2<m_players.size(); ++p2)
+      for (size_t p2=p1+1; p2<m_players.size(); ++p2)
       {
          Match match(m_players[p1], m_players[p2]);
          int res = match.play(m_numGames);
@@ -47,7 +47,7 @@ void Tournament::show()
 {
    // Make a map of player score and player name
    std::multimap<int, std::string, std::greater<int> > result;
-   for (int p1=0; p1<m_players.size(); ++p1)
+   for (size_t p1=0; p1<m_players.size(); ++p1)
    {
       result.insert(std::pair<int, std::string>(m_totals[p1], m_players[p1]->name()));
    }
@@ -70,7 +70,7 @@ void Tournament::showTable()
 {
    // Make a map of player score and player number
    std::multimap<int, int, std::greater<int> > result;
-   for (int p1=0; p1<m_players.size(); ++p1)
+   for (size_t p1=0; p1<m_players.size(); ++p1)
    {
       result.insert(std::pair<int, int>(m_totals[p1], p1));
    }

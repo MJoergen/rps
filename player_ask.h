@@ -55,7 +55,7 @@ private:
 		}
 
 		int copied = 0;
-		for (int moveId = 1; moveId < moveHistory.size(); ++moveId) {
+		for (size_t moveId = 1; moveId < moveHistory.size(); ++moveId) {
 			if (moveHistory[moveId].m_you == moveHistory[moveId - 1].m_me) {
 				++copied;
 			}
@@ -76,7 +76,7 @@ private:
 		}
 
 		int nexted = 0;
-		for (int moveId = 1; moveId < moveHistory.size(); ++moveId) {
+		for (size_t moveId = 1; moveId < moveHistory.size(); ++moveId) {
 			if (moveHistory[moveId].m_you == beats(moveHistory[moveId - 1].m_me)) {
 				++nexted;
 			}
