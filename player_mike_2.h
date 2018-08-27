@@ -93,7 +93,7 @@ private:
       m_predictYou[1] = 1.0/3.0;   // CYCLE
       m_predictYou[2] = 1.0/3.0;   // CYCLE
 
-      for (int i=1; i<moveHistory.size(); ++i)
+      for (size_t i=1; i<moveHistory.size(); ++i)
       {
          // We compare the opponents last move, with our previous move,
          // to determine the opponents dominant strategy.

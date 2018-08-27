@@ -60,7 +60,7 @@ private:
          m_predict[ix] = 0;
       }
 
-      for (int i=1; i<moveHistory.size(); ++i)
+      for (size_t i=1; i<moveHistory.size(); ++i)
       {
          int ix = moveHistory[i-1].m_you*9 + moveHistory[i-1].m_me*3 + moveHistory[i].m_you;
          m_predict[ix] += 1;
