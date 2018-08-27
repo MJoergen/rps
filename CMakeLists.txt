@@ -14,4 +14,4 @@ add_executable(rps
         player_const.h
         player_copy.h
 		player_random_dist.h
-		player_ask.h)
+		player_ask.h player_mads.h)
