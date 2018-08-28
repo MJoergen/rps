@@ -8,15 +8,14 @@ const int SCISSORS = 2;
 int beats(int draw);
 
 // A single move consists of a draw from each player
-class Move
+struct Move
 {
-   public:
-      Move(int me, int you) : m_me(me), m_you(you) {}
+   int m_me;
+   int m_you;
 
-   public:
-      int m_me;
-      int m_you;
-}; // end of class Move
+   // Constructor
+   Move(int me, int you) : m_me(me), m_you(you) {}
+}; // end of struct Move
 
 #endif // _MOVE_H_
 
