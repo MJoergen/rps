@@ -55,7 +55,7 @@ private:
         float avg = sum/((float) moveHistory.size());
 
         for (size_t j = 0; j < moveHistory.size(); ++j) {
-            sumDiff += (float) std::pow(moveHistory[j].m_you-avg, 2);
+            sumDiff += (moveHistory[j].m_you - avg) * (moveHistory[j].m_you - avg);
         }
 
         float sd = std::sqrt(sumDiff/((float) moveHistory.size()));
