@@ -32,11 +32,11 @@ public:
         //then return a move to beat each, respectively. Else return a random move.
 
         if (rand_result >= 0.0-sigma_width*data[1] and rand_result <= 0.0+sigma_width*data[1])
-            return  PAPER;
+            return beats(0);
         else if (rand_result >= 1.0-sigma_width*data[1] and rand_result <= 1.0 + sigma_width*data[1])
-            return SCISSORS;
+            return beats(1);
         else if (rand_result >= 2.0-sigma_width*data[1] and rand_result <= 2.0 + sigma_width*data[1])
-            return ROCK;
+            return beats(2);
         else
             return rand() % 3;
 
@@ -49,13 +49,13 @@ private:
         float sum(0.0);
         float sumDiff(0.0);
 
-        for (size_t i = 0; i < moveHistory.size(); ++i) {
-            sum += moveHistory[i].m_you;
+        for (auto i : moveHistory) {
+            sum += i.m_you;
         }
         float avg = sum/((float) moveHistory.size());
 
-        for (size_t j = 0; j < moveHistory.size(); ++j) {
-            sumDiff += (moveHistory[j].m_you - avg) * (moveHistory[j].m_you - avg);
+        for (auto j : moveHistory) {
+            sumDiff += (j.m_you - avg) * (j.m_you - avg);
         }
 
         float sd = std::sqrt(sumDiff/((float) moveHistory.size()));
