@@ -20,10 +20,16 @@ public:
         std::vector<float> data = calc(moveHistory);
 
         std::default_random_engine generator;
+
+        // Normal distribution with the mean of the other persons moves and corresponding
+        // standard deviation.
         std::normal_distribution<float> distribution(data[0], data[1]);
 
         float rand_result = distribution(generator);
         float sigma_width = 0.8;
+
+        // If the randomly generated value from the normal distribution falls within sigma_width*sd of 0, 1 or 2
+        //then return a move to beat each, respectively. Else return a random move.
 
         if (rand_result >= 0.0-sigma_width*data[1] and rand_result <= 0.0+sigma_width*data[1])
             return  PAPER;
@@ -39,6 +45,7 @@ public:
 private:
     std::vector<float> calc(const std::vector<Move>& moveHistory)
     {
+        // Calculate mean and standard deviation of the other persons moves
         float sum(0.0);
         float sumDiff(0.0);
 
