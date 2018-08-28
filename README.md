@@ -37,3 +37,5 @@ of the tournament is to achieve the highest total number of wins.
 * ANTI_NEXT   : Specifically designed to win against the NEXT strategy.
 * MADS        : Uses a normal distribution to predict the move of its opponents.
 * MIKE_4      : Call Sarah O'Connor. NOW!
+* ANTI_MIKE   : A (somewhat) successfull attempt to gain points over MIKE_4
+* DELAY       : A more unpredictable version of NEXT.

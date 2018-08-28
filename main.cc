@@ -20,6 +20,8 @@
 #include "player_mike_4.h"
 #include "player_ask.h"
 #include "player_mads.h"
+#include "player_delay.h"
+#include "player_anti_mike.h"
 
 #ifdef DEBUG
 const int numGames = 50;
@@ -53,6 +55,8 @@ int main()
    players.push_back(new PlayerMike_3(    "MIKE_3"       ));
    players.push_back(new PlayerMike_4(    "MIKE_4"       ));
    players.push_back(new PlayerMads(      "MADS"         ));
+   players.push_back(new PlayerDelay(     "DELAY"        ));
+   players.push_back(new PlayerAntiMike(  "ANTI_MIKE"    ));
    Tournament t(players, numGames);
    
    t.play();
