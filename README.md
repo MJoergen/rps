@@ -23,6 +23,7 @@ of the tournament is to achieve the highest total number of wins.
 * NEXT        : This player always plays the move that beats the opponents last move.
 * RANDOM      : This is the "optimal" strategy.
 * CONST       : This player always plays the same move.
+* CONST_2     : This player usually plays the same move, but occasionally changes strategy.
 * COPY        : This player always copies the opponents last move.
 * RANDOM_DIST : This player guesses what the opponent picks from the distribution of your last choices.
 * MIKE        : The fantastic player that can predict the opponents next move :-)

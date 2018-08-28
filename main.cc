@@ -3,6 +3,7 @@
 #include "tournament.h"
 #include "player.h"
 #include "player_const.h"
+#include "player_const_2.h"
 #include "player_alternate.h"
 #include "player_cycle.h"
 #include "player_cycle_2.h"
@@ -34,6 +35,7 @@ int main()
    players.push_back(new PlayerConst(     "ROCK",       0));
    players.push_back(new PlayerConst(     "PAPER",      1));
    players.push_back(new PlayerConst(     "SCISSORS",   2));
+   players.push_back(new PlayerConst_2(   "CONST_2"      ));
    players.push_back(new PlayerAlternate( "ALTERNATE"    ));
    players.push_back(new PlayerCycle(     "CYCLE"        ));
    players.push_back(new PlayerCycle_2(   "CYCLE_2"      ));
