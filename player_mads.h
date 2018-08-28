@@ -42,12 +42,12 @@ private:
         float sum(0.0);
         float sumDiff(0.0);
 
-        for (int i = 0 ; i < moveHistory.size() ; ++i) {
+        for (size_t i = 0; i < moveHistory.size(); ++i) {
             sum += moveHistory[i].m_you;
         }
         float avg = sum/((float) moveHistory.size());
 
-        for (int j = 0; j < moveHistory.size(); ++j) {
+        for (size_t j = 0; j < moveHistory.size(); ++j) {
             sumDiff += (float) std::pow(moveHistory[j].m_you-avg, 2);
         }
 
