@@ -36,3 +36,4 @@ of the tournament is to achieve the highest total number of wins.
 * NEXT_2      : Slightly more intelligent version of NEXT, that tries to detect if the opponent has figured out its strategy.
 * ANTI_NEXT   : Specifically designed to win against the NEXT strategy.
 * MADS        : Uses a normal distribution to predict the move of its opponents.
+* MIKE_4      : Call Sarah O'Connor. NOW!
