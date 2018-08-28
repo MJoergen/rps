@@ -24,13 +24,14 @@ add_executable(rps
 		player_next_2.h
 		player_anti_next.h
 		player_const.h
+		player_const_2.h
 		player_cycle.h
 		player_cycle_2.h
+		player_cycle_3.h
 		player_mike.h
 		player_mike_2.h
 		player_mike_3.h
 		player_mike_4.h
 		player_anti_mike.h
-		player_next.h
 		player_delay.h
 		)
