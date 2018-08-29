@@ -8,6 +8,33 @@
 
 // This is another awesome player: It uses
 // quantum magical algorithms :-)
+//
+// The method of this player is to build a predictive model of the opponent.
+// The model is based on the assumption that the move the opponent selects
+// depends on four values: My last move, my previous move, opponents last move, and
+// opponents previous move.
+// Each of these four inputs take on one of three different values, so there
+// are a total of 3^4 = 81 different possible inputs.
+// For each input this player counts the number of times the opponent plays each
+// of the three moves. So the table contains a total of 81*3 = 243 rows,
+// each containing a counter for this particular sequence of events.
+// 
+// Example:
+// Assume the last two moves were (PAPER, ROCK) and (ROCK, SCISSORS).
+// If the opponent happens to be the NEXT player, then part of the table
+// will look as follows:
+//
+//  Opp previous | My previous | Opp last | My last | Opp next | Count
+//  -------------+-------------+----------+---------+----------+-------
+//      ROCK     |   PAPER     | SCISSORS | ROCK    | ROCK     |    0
+//      ROCK     |   PAPER     | SCISSORS | ROCK    | PAPER    |  100
+//      ROCK     |   PAPER     | SCISSORS | ROCK    | SCISSORS |    0
+//
+// The table above shows that with this history, there is a large probability
+// that the opponents next move will be PAPER. 
+//
+// Once the above table is built, it is used to randomly predict the opponents
+// next move, and we then choose a move that beats that.
 
 class PlayerMike_4 : public Player
 {
