@@ -34,4 +34,5 @@ add_executable(rps
 		player_mike_4.h
 		player_anti_mike.h
 		player_delay.h
-		delay_2.h)
+		player_delay_2.h
+		player_terminator.h)
