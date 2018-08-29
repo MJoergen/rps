@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 project(rps)
 
 set(CMAKE_CXX_STANDARD 11)
-
+set(CMAKE_BUILD_TYPE Release)
 include_directories(.)
 
 add_executable(rps
@@ -34,4 +34,4 @@ add_executable(rps
 		player_mike_4.h
 		player_anti_mike.h
 		player_delay.h
-		)
+		delay_2.h)
