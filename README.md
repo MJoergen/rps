@@ -39,3 +39,4 @@ of the tournament is to achieve the highest total number of wins.
 * MIKE_4      : Call Sarah O'Connor. NOW!
 * ANTI_MIKE   : A (somewhat) successfull attempt to gain points over MIKE_4
 * DELAY       : A more unpredictable version of NEXT.
+* DELAY_2     : Similar to DELAY (suprise!) but delays by -3 instead of -6.
