@@ -22,7 +22,8 @@
 #include "player_mads.h"
 #include "player_delay.h"
 #include "player_anti_mike.h"
-#include "delay_2.h"
+#include "player_terminator.h"
+#include "player_delay_2.h"
 
 #ifdef DEBUG
 const int numGames = 50;
@@ -58,7 +59,8 @@ int main()
    players.push_back(new PlayerMads(      "MADS"         ));
    players.push_back(new PlayerDelay(     "DELAY"        ));
    players.push_back(new PlayerAntiMike(  "ANTI_MIKE"    ));
-   players.push_back(new PlayerDelay_2 (   "DELAY_2"     ));
+   players.push_back(new PlayerDelay_2 (  "DELAY_2"      ));
+   players.push_back(new PlayerTerminator("TERMINATOR"   ));
 
    Tournament t(players, numGames);
    
