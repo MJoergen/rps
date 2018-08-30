@@ -41,3 +41,4 @@ of the tournament is to achieve the highest total number of wins.
 * DELAY       : A more unpredictable version of NEXT.
 * TERMINATOR  : A bot that recognizes its opponent!
 * DELAY_2     : Similar to DELAY (suprise!) but delays by -3 instead of -6.
+* DELAY_3     : Delay of -2.
